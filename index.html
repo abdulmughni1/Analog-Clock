@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="index.css">
+ 
+</head>
+<body>
+    <h1 class="myhead">MY ANALOG CLOCK</h1>
+    <div id="clock">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+    <script>
+        setInterval(() => {
+    var date = new Date();
+   var htime = date.getHours();
+   var mtime = date.getMinutes();
+   var stime = date.getSeconds();
+   var hrotation = htime*30 + mtime/2;
+   var mrotation = mtime*6;
+   var srotation = stime*6;
+
+    hour.style.transform = `rotate(${hrotation}deg)`;
+    minute.style.transform = `rotate(${mrotation}deg)`;
+    second.style.transform = `rotate(${srotation}deg)`;
+}, 1000);
+    </script>
+</body>
+</html>
